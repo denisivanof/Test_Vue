@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1 class="h1">Список пользователей</h1>
+    <hr>
+    <users class="users-card"></users>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import users from "@/components/users/users";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {users}
 }
 </script>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-align: start;
+}
+.h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.users-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 </style>
